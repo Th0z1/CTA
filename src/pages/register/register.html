@@ -1,0 +1,34 @@
+
+<ion-content padding>
+
+    <form [formGroup]="person" (ngSubmit)="onSubmitPerson(person)"  >
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input formControlName="name" type="text"></ion-input>
+        </ion-item>
+        <div *ngIf="person.controls.name.invalid && person.controls.name.dirty">
+          <p>Please enter name</p>
+        </div>
+        <ion-item>
+          <ion-label floating>surname</ion-label>
+          <ion-input formControlName="surname" type="text"></ion-input>
+        </ion-item>
+        <div *ngIf="person.controls.surname.invalid && person.controls.surname.dirty">
+          <p>Please enter name</p>
+        </div>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input formControlName="email" type="text"></ion-input>
+          </ion-item>
+        <div *ngIf="person.controls.email.invalid && person.controls.email.dirty">
+          <p>Please enter email</p>
+        </div>
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input formControlName="password" type="text"></ion-input>
+          </ion-item>
+        <div *ngIf="person.controls.password.invalid && person.controls.password.dirty">
+          <p>Please enter name</p>
+        </div>
+    </form>
+</ion-content>

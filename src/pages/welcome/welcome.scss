@@ -1,0 +1,28 @@
+page-welcome {
+    .info{
+        position:fixed;
+        top: 1%;
+        width: 90%;
+        height: 20em;
+        margin: auto;
+        color: white;
+        text-align: center;
+    }
+    .buttons-access{
+        position: absolute;
+        top: 60%;
+        height: 14em;
+        width: 90%
+    }
+    #header{
+        font-size: 1em;
+        color: green;
+    }
+    #symbol{
+        font-size: 2.5em;
+        color: green;
+    }
+    #words{
+        color: green;
+    }
+}
