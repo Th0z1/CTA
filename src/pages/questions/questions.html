@@ -1,0 +1,49 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>{{taskName}} <br> {{timerH}} : {{timerM}} : {{timerS}}
+
+
+      </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let item of questions; let idx = index" >
+            
+      <ion-card-header *ngIf="item.questionType == 'FIN'">
+        {{item.question}}?
+      </ion-card-header>
+
+      <ion-card-header *ngIf="item.questionType == 'TF'">
+          {{item.question}}?
+        </ion-card-header>
+    
+      <ion-card-content *ngIf="item.questionType == 'FIN'">
+          <ion-input type="text" value="" [(ngModel)]="anArray[idx]"></ion-input>
+      </ion-card-content> 
+
+      <ion-card-content *ngIf="item.questionType == 'TF'">
+          <ion-row radio-group [(ngModel)]="anArray[idx]">
+
+              <ion-item no-lines>
+                  <ion-label> True</ion-label>
+                  <ion-radio value="True"></ion-radio>
+              </ion-item>
+    
+              <ion-item>
+                  <ion-label> False</ion-label>
+                  <ion-radio value="False"></ion-radio>
+                </ion-item>
+          </ion-row>
+      </ion-card-content>
+      </ion-card>
+
+
+      <button ion-button full  (click)="goTo()">let's go</button>
+      
+</ion-content>

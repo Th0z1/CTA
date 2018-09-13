@@ -1,0 +1,29 @@
+page-task {
+
+    .col{
+        border: 1px solid blue;
+        padding: 10px;
+        margin: 5px;
+    }
+    .left{
+        width: 95%;
+        height: 150px;
+        position: relative;
+        float: left;
+        margin: auto;
+        text-align: center;
+        background-color: rgb(218, 253, 253);
+        margin: 5px;
+    }
+    .left button{
+        margin-top: 93px;
+    }
+    
+    .instruction{
+        height: 60px;
+        border: 1px solid red;
+    }
+    .button{
+        background-color: grey;
+    }
+}

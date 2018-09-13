@@ -1,34 +1,38 @@
 
 <ion-content padding>
 
-    <form [formGroup]="person" (ngSubmit)="onSubmitPerson(person)"  >
+    <div class="forms">
+      <form [formGroup]="person" (ngSubmit)="register(person)"  >
         <ion-item>
-          <ion-label floating>Name</ion-label>
-          <ion-input formControlName="name" type="text"></ion-input>
+          <ion-label id="labels" stacked>Name</ion-label>
+          <ion-input formControlName="name" id="input-field" type="text"></ion-input>
         </ion-item>
         <div *ngIf="person.controls.name.invalid && person.controls.name.dirty">
-          <p>Please enter name</p>
+          <p id="warning">Please enter name</p>
         </div>
         <ion-item>
-          <ion-label floating>surname</ion-label>
+          <ion-label id="labels" stacked>Surname</ion-label>
           <ion-input formControlName="surname" type="text"></ion-input>
         </ion-item>
         <div *ngIf="person.controls.surname.invalid && person.controls.surname.dirty">
-          <p>Please enter name</p>
+          <p id="warning">Please enter surname</p>
         </div>
         <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input formControlName="email" type="text"></ion-input>
+            <ion-label id="labels" stacked>Email</ion-label>
+            <ion-input color="white" formControlName="email" type="email"></ion-input>
           </ion-item>
         <div *ngIf="person.controls.email.invalid && person.controls.email.dirty">
-          <p>Please enter email</p>
+          <p id="warning">Please enter email</p>
         </div>
         <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input formControlName="password" type="text"></ion-input>
+            <ion-label id="labels" stacked>Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
           </ion-item>
         <div *ngIf="person.controls.password.invalid && person.controls.password.dirty">
-          <p>Please enter name</p>
+          <p id="warning">password length must be at least 6</p>
         </div>
+
+        <button ion-button block type="submit" outline small [disabled]="person.invalid">Register</button>
     </form>
+    </div>
 </ion-content>

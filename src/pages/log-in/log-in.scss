@@ -1,3 +1,46 @@
 page-log-in {
 
+    .content{
+        background-image: url('../assets/imgs/finalBlur.jpg');
+    }
+    .item{
+        background-color: transparent;
+    }
+    .forms{
+        top: 55%;
+        width: 90%;
+        position: absolute;
+    }
+    .input{
+        font-size: 1.2em;
+        color: rgb(202, 191, 191);
+    }
+    #labels{
+        font-size: 1.1em;
+        color: white;
+    }
+    #warning{
+        color: red;
+
+    }
+    .info{
+        margin: auto;
+        width: 100%;
+        height: auto;
+        top: 30%;
+        position: absolute;
+        color: rgb(202, 191, 191);
+    }
+    #header{
+        font-size: 1.2em;
+    }
+    #login{
+        color: white;
+        border: 1px solid white;
+    }
+    .button{
+        color: white;
+    }
+        
+    
 }

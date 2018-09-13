@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>task</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  
+
+    <div *ngFor="let i of task; let j = index">
+        <div class="left" *ngIf="i?.taskName != ''" (click)="questionsPage(i.taskName)" >
+                Instructions:
+                
+            <div class="instruction" *ngFor="let j of i.instruction">
+                {{j}}
+
+            </div>
+            <button ion-button block >{{i?.taskName}}</button>
+        </div>
+        
+    </div>
+
+ 
+
+</ion-content>
