@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { tasksName } from '../../retreiveTasks';
+import { Navbar } from 'ionic-angular/navigation/nav-interfaces';
 
 /**
  * Generated class for the TaskPage page.
@@ -10,11 +11,14 @@ import { tasksName } from '../../retreiveTasks';
  */
 declare var firebase;
 @IonicPage()
+
 @Component({
   selector: 'page-task',
   templateUrl: 'task.html',
 })
 export class TaskPage {
+
+  @ViewChild('navbar') navBar: Navbar;
   task 
   instruction
   objectTask : tasksName;
@@ -32,4 +36,9 @@ export class TaskPage {
   questionsPage(type){
     this.navCtrl.push("QuestionsPage",{task : type})
   }
+
+
+  onViewDidLoad() {
+    this.navBar.hideBackButton
+    }
 }
